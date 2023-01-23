@@ -21,9 +21,11 @@ const Todo = ({title}) => {
 					Delete
 				</button>
 			</div>
+			{/* conditionally render Modal and Backdrop */}
 			{isModalOpen && (
 				<>
-					<Modal title='{title}' />
+					{/* I'll optionally pass in a title prop to Modal */}
+					<Modal title={'DELETE: "' + title + '". Are you sure you?'} />
 					<Backdrop />
 				</>
 			)}
